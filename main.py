@@ -82,8 +82,6 @@ root = tkinter.Tk()
 root.geometry("900x600")
 root.title("Launcher")
 
-root.wm_attributes('-transparentcolor', '#ab23ff')
-
 bgimg = tkinter.PhotoImage(file="bg.png")
 btnBg = tkinter.PhotoImage(file="playbytton.png")
 pseudo = tkinter.PhotoImage(file="playbytton.png")

@@ -46,6 +46,10 @@ def downloadExtractFiles():
             & os.path.exists(folder + "/libraries"):
         print("deja là")
     else:
+        ctypes.windll.user32.MessageBoxW(0,
+                                         "Quand vous cliquerez sur Ok, le téléchargement va commencer",
+                                         "Téléchargement", 0)
+
         filepath = folder + "/game.zip"
         url = "http://gamezipfile.duckdns.org/game.zip"
         download(url, folder)
@@ -55,6 +59,7 @@ def downloadExtractFiles():
 
 
 def launchVerOne():
+    downloadExtractFiles()
     with open(tmpfolder + "/mcfolder.txt", 'r') as f:
         folder = f.read()
     playerUUID = uuid.uuid1()
@@ -72,7 +77,7 @@ def launchVerOne():
 
 
 baseFolder()
-downloadExtractFiles()
+
 root = tkinter.Tk()
 root.geometry("900x600")
 root.title("Launcher")

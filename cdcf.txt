@@ -1,2 +1,0 @@
-Fonction d'usage : Lancer Minecraft avec les mods et java
-

@@ -35,6 +35,26 @@ def baseFolder():
             f.write(filename)
 
 
+def checkFolderExists():
+    while os.path.getsize(tmpfolder + "/mcfolder.txt") == 0:
+        ctypes.windll.user32.MessageBoxW(0,
+                                         "Vous n'avez pas indiqué de chemin, merci d'indiquer un chemin d'installation",
+                                         "Erreur", 0x10)
+        filename = filedialog.askdirectory()
+        print("doss: " + filename)
+
+        flpth = filename + "e.txt"
+        try:
+            filehandle = open(flpth, 'w')
+        except IOError:
+            ctypes.windll.user32.MessageBoxW(0,
+                                             "Dossier protégé par des autorisations administrateurs, merci de relancer le programme et de changer de dossier.",
+                                             "Erreur", 0x10)
+            sys.exit("protected")
+
+        with open(tmpfolder + "/mcfolder.txt", 'w') as f:
+            f.write(filename)
+
 
 def downloadExtractFiles():
     with open(tmpfolder + "/mcfolder.txt", 'r') as f:
@@ -47,7 +67,7 @@ def downloadExtractFiles():
         print("deja là")
     else:
         ctypes.windll.user32.MessageBoxW(0,
-                                         "Quand vous cliquerez sur Ok, le téléchargement va commencer",
+                                         "Lorsque vous cliquerez sur Ok, le téléchargement va commencer",
                                          "Téléchargement", 0)
 
         filepath = folder + "/game.zip"
@@ -77,6 +97,7 @@ def launchVerOne():
 
 
 baseFolder()
+checkFolderExists()
 
 root = tkinter.Tk()
 root.geometry("900x600")

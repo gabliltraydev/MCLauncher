@@ -47,6 +47,7 @@ def checkFolderExists():
         try:
             filehandle = open(flpth, 'w')
         except IOError:
+
             ctypes.windll.user32.MessageBoxW(0,
                                              "Dossier protégé par des autorisations administrateurs, merci de relancer le programme et de changer de dossier.",
                                              "Erreur", 0x10)

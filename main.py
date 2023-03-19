@@ -16,7 +16,7 @@ def create_base_folder():
         messagebox.showinfo(title="Sélectionner un dossier",
                             message="Merci de choisir le dossier d'installation des fichiers de votre launcher.")
         file_name = filedialog.askdirectory()
-        check_admin_file = file_name + "e.txt"
+        check_admin_file = file_name + "_check_admin.txt"
         print(file_name)
         try:
             filehandle = open(check_admin_file, 'w')
@@ -95,6 +95,7 @@ create_base_folder()
 root = tkinter.Tk()
 root.geometry("900x600")
 root.title("Launcher")
+root.resizable(False, False)
 
 background_image = tkinter.PhotoImage(file="bg.png")
 button_background = tkinter.PhotoImage(file="playbytton.png")
@@ -103,7 +104,7 @@ window_background = tkinter.Label(root, i=background_image)
 pseudo_field = tkinter.Entry(root, width=33)
 start_button = tkinter.Button(root, height='80px', width='109px', command=lambda: launch_ver_one(), borderwidth=0,
                               image=button_background)
-
+    
 pseudo_field.place(x=245, y=291, in_=root)
 start_button.place(x=555, y=250, in_=root)
 window_background.pack()

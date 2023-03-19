@@ -12,4 +12,6 @@ Pour le récupérer et le modifier afin que ce soit le vôtre :
 
 Et voilà, votre launcher est fonctionnel et télécharge la version que vous avez choisi :)
 
+Si vous voulez utiliser une version de minecraft Custom (avec des mods pré-installés ou encore une version non disponible [ici](https://github.com/gabliltraydev/Minecraft-Portable/releases), alors faites vous-même votre version custom en téléchargeant la base de votre version [ici](https://github.com/gabliltraydev/Minecraft-Portable/tree/main/Version%20de%20Base) et en suivant [ce tuto](https://github.com/gabliltraydev/Minecraft-Portable/blob/main/Version%20de%20Base/readme.md)
+
 Amusez vous bien !

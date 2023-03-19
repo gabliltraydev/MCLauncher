@@ -8,7 +8,7 @@ from zipfile import *
 
 TEMP_FOLDER = tempfile.gettempdir()
 INSTALLATION_FOLDER = os.path.join(TEMP_FOLDER, "mcfolder.txt")
-DOWNLOAD_URL = "http://gamezipfile.duckdns.org/game.zip"
+DOWNLOAD_URL = "download_url"
 
 
 def create_base_folder():
@@ -104,7 +104,7 @@ window_background = tkinter.Label(root, i=background_image)
 pseudo_field = tkinter.Entry(root, width=33)
 start_button = tkinter.Button(root, height='80px', width='109px', command=lambda: launch_ver_one(), borderwidth=0,
                               image=button_background)
-    
+
 pseudo_field.place(x=245, y=291, in_=root)
 start_button.place(x=555, y=250, in_=root)
 window_background.pack()

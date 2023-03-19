@@ -1,5 +1,6 @@
 import tempfile
 import os
+import subprocess
 import ctypes
 import sys
 from tkinter import filedialog
@@ -16,9 +17,8 @@ def baseFolder():
         with open(tmpfolder + "/mcfolder.txt", 'r') as f:
             print(f.read())
     else:
-        ctypes.windll.user32.MessageBoxW(0,
-                                         "Merci de choisir le dossier d'installation des fichiers de votre launcher.",
-                                         "Sélectionner un dossier", 0)
+        tkinter.messagebox.showinfo(title="Sélectionner un dossier",
+                                    message="Merci de choisir le dossier d'installation des fichiers de votre launcher.")
         filename = filedialog.askdirectory()
         print("doss: " + filename)
 
@@ -26,9 +26,9 @@ def baseFolder():
         try:
             filehandle = open(flpth, 'w')
         except IOError:
-            ctypes.windll.user32.MessageBoxW(0,
-                                             "Dossier protégé par des autorisations administrateurs, merci de relancer le programme et de changer de dossier.",
-                                             "Erreur", 0x10)
+            tkinter.messagebox.showerror(title="Erreur",
+                                         message="Dossier protégé par des autorisations administrateurs, merci de relancer le programme et de changer de dossier.")
+
             sys.exit("protected")
 
         with open(tmpfolder + "/mcfolder.txt", 'w') as f:
@@ -37,9 +37,9 @@ def baseFolder():
 
 def checkFolderExists():
     while os.path.getsize(tmpfolder + "/mcfolder.txt") == 0:
-        ctypes.windll.user32.MessageBoxW(0,
-                                         "Vous n'avez pas indiqué de chemin, merci d'indiquer un chemin d'installation",
-                                         "Erreur", 0x10)
+        tkinter.messagebox.showerror(title="Erreur",
+                                     message="Vous n'avez pas indiqué de chemin, merci d'indiquer un chemin d'installation")
+
         filename = filedialog.askdirectory()
         print("doss: " + filename)
 
@@ -94,7 +94,7 @@ def launchVerOne():
     with open(folder + "/uuid.txt", 'w') as f:
         f.write(uuidstr)
 
-    os.system(folder + "/jeu.bat")
+    subprocess.call(folder + "/jeu.bat")
 
 
 baseFolder()

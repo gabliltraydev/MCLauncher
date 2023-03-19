@@ -29,7 +29,7 @@ def create_base_folder():
 
         with open(TEMP_FOLDER + "/mcfolder.txt", 'w') as f:
             f.write(file_name)
-            
+
     while os.path.getsize(TEMP_FOLDER + "/mcfolder.txt") == 0:
         messagebox.showerror(title="Erreur",
                              message="Vous n'avez pas indiqué de chemin, merci d'indiquer un chemin d'installation")

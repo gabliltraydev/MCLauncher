@@ -1,5 +1,5 @@
 # McLauncher
-Launcher Minecraft OpenSource développé par moi en Python
+Launcher Minecraft OpenSource développé en Python
 
 Executable minecraft fait par https://github.com/rxmii6z
 ----------------------------------------------------------

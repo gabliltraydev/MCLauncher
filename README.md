@@ -16,7 +16,7 @@ Allez lire le ReadMe de [ce repo](https://github.com/gabliltraydev/Minecraft-Por
 - Allez dans le dossier ou se trouve les fichiers puis sélectionez tout et faites Clic-Droit --> Envoyer-vers --> Dossier Compressé
 - Nommez le dossier compressé "game.zip" (c'est OBLIGATOIRE, sinon ça ne fonctionnera pas !)
 - Uploadez le sur une plateforme de stockage de fichiers ou vous pouvrez avoir un lien de téléchargement direct (google drive par exemple ou github)
-- Modifiez la variable "DOWNLOAD_URL" dans le fichier "main.py" en remplaçant "download_url" par celle de votre fichiez ZIP à télécharger
+- Modifiez la variable ```DOWNLOAD_URL = "download_url"``` dans le fichier "main.py" en remplaçant "download_url" par celle de votre fichiez ZIP à télécharger
 
 Et voilà, votre launcher est fonctionnel et télécharge la version que vous avez choisi :)
 

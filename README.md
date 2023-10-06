@@ -1,6 +1,9 @@
 # McLauncher
 Launcher Minecraft OpenSource développé en Python
 
+## ATTENTION 
+Launcher momentanément non fonctionnel lors du lancement des jeux. Désolé du dérangement.
+
 Co-développé par moi et https://github.com/rxmii6z
 ----------------------------------------------------------
 Allez lire le ReadMe de [ce repo](https://github.com/gabliltraydev/Minecraft-Portable/) afin de prendre la version de minecraft qui vous intéresse (vous pouvez également créer votre version custom avec des mods préinstallés ou encore une version non disponible)

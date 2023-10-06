@@ -8,7 +8,7 @@ Allez lire le ReadMe de [ce repo](https://github.com/gabliltraydev/Minecraft-Por
 ## Si vous avez trouvé une version toute faite 
 - Téléchargez les fichiers du launcher
 (le code en python est bon pour lancer une seule version, si vous voulez juste lancer une version de MC en particulier ne touchez pas au code autre que la ligne que vous allez devoir changer après)
-- Modifiez la variable ```DOWNLOAD_URL = "download_url"``` dans le fichier "main.py" en remplaçant "download_url" par celle de votre fichiez ZIP à télécharger avec le lien copié à l'aide du tuto dans le readme de [ce repo](https://github.com/gabliltraydev/Minecraft-Portable/)
+- Modifier dans le code la ligne ```DOWNLOAD_URL = "download_url"``` dans le fichier "main.py" en remplaçant "download_url" par celle de votre fichiez ZIP à télécharger avec le lien copié à l'aide du tuto dans le readme de [ce repo](https://github.com/gabliltraydev/Minecraft-Portable/)
 -  Modifier dans le code la ligne ```file_path = folder + "/game.zip``` en remplaçent "game.zip" par la version choisie (par exemple, si vous avez pris la 1.8.9 Vanilla, le lien fini par "...Vanilla.1.8.9.zip" et donc le .zip s'appelle "Vanilla.1.8.9.zip", donc vous devrez modiier "game.zip" par "Vanilla.1.8.9.zip"
 - ⚠️ Ne pas modifier le nom des dossiers et du .bat éxécutable, sinon le launcher ne fonctionnera pas ⚠️
 

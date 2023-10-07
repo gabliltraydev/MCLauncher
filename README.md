@@ -2,7 +2,7 @@
 Launcher Minecraft OpenSource développé en Python
 
 ## ATTENTION 
-Launcher momentanément non fonctionnel lors du lancement des jeux. Désolé du dérangement.
+Launcher momentanément non fonctionnel lors du lancement des jeux. Désolé du dérangement. Un [autre launcher](https://github.com/gabliltraydev/OldMCLauncher) est disponible sur mon github, mais il est assez obselète.
 
 Co-développé par moi et https://github.com/rxmii6z
 ----------------------------------------------------------

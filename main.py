@@ -64,7 +64,7 @@ def download_extract_files():
                                          "Lorsque vous cliquerez sur Ok, le téléchargement va commencer",
                                          "Téléchargement", 0)
 
-        file_path = folder + "/Vanilla.1.16.5.zip"
+        file_path = folder + "/game.zip"
 
         download(DOWNLOAD_URL, folder)
 

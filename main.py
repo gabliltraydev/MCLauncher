@@ -64,7 +64,7 @@ def download_extract_files():
                                          "Lorsque vous cliquerez sur Ok, le téléchargement va commencer",
                                          "Téléchargement", 0)
 
-        file_path = folder + "/game.zip"
+        file_path = folder + "/Vanilla.1.16.5.zip"
 
         download(DOWNLOAD_URL, folder)
 
@@ -81,13 +81,14 @@ def launch_ver_one():
     print(uuid_string)
 
     player_pseudo = pseudo_field.get()
+    print(player_pseudo)
 
     with open(folder + "/nick.txt", 'w') as f:
         f.write(player_pseudo)
     with open(folder + "/uuid.txt", 'w') as f:
         f.write(uuid_string)
 
-    subprocess.call(folder + "/jeu.bat")
+    subprocess.Popen([os.path.join(folder, "jeu.bat")], cwd=folder)
 
 
 create_base_folder()

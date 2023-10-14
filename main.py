@@ -19,7 +19,7 @@ def create_base_folder():
         check_admin_file = file_name + "_check_admin.txt"
         print(file_name)
         try:
-            filehandle = open(check_admin_file, 'w')
+            file_handle = open(check_admin_file, 'w')
         except IOError:
             tkinter.messagebox.showerror(title="Erreur",
                                          message="Dossier protégé par des autorisations administrateurs, merci de "
@@ -39,7 +39,7 @@ def create_base_folder():
 
         file_path = filename + "_check_admin.txt"
         try:
-            filehandle = open(file_path, 'w')
+            file_handle = open(file_path, 'w')
         except IOError:
             messagebox.showerror(title="Erreur",
                                  message="Dossier protégé par des autorisations administrateurs, merci de relancer le "
